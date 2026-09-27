@@ -24,16 +24,67 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from(".hero-txt h3", { opacity: 0, y: -16, duration: 1, ease: "power2.out", delay: 0.2 });
-    gsap.from(".hero-txt h1, .hero-txt h2", { opacity: 0, y: 30, duration: 1.1, ease: "power2.out", delay: 0.35 });
-    gsap.from(".hero-txt h4", { opacity: 0, y: 20, duration: 1, ease: "power2.out", delay: 0.55 });
-    gsap.from(".hero a", { opacity: 0, y: 20, duration: 1, ease: "power2.out", delay: 0.75 });
-
-    gsap.from(".collection h1", {
-      scrollTrigger: { trigger: ".collection h1", start: "top 85%", toggleActions: "play none none reverse" },
-      opacity: 0, y: 30, duration: 1, ease: "power2.out",
+    gsap.from(".hero-txt h3", { 
+      opacity: 0,
+      y: -16, 
+      duration: 1,
+      ease: "power2.out", 
+       delay: 0.2 
+    });
+    gsap.from(".hero-txt h1, .hero-txt h2", { 
+      opacity: 0, y: 30, 
+      duration: 1.1, 
+      ease: "power2.out", 
+      delay: 0.35 
+    });
+    gsap.from(".hero-txt h4", { 
+      opacity: 0, 
+      y: 20, 
+      duration: 1, 
+      ease: "power2.out", 
+      delay: 0.55 
+    });
+    gsap.from(".hero a", { 
+      opacity: 0, 
+      y: 20, 
+      duration: 1, 
+      ease: "power2.out", 
+      delay: 0.75 
     });
 
+    gsap.from(".collection h1", {
+      scrollTrigger: { 
+        trigger: ".collection h1", 
+        start: "top 85%", 
+        toggleActions: "play pause resume reverse" 
+      },
+      opacity: 0, y: 30, duration: 1, ease: "power2.out",
+    });
+    gsap.from(".abt-header h1", {
+      scrollTrigger: {
+        trigger: ".abt-header h1",
+        start: "top 85%",
+        toggleActions: "play none none reverse" 
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power2.out",
+      
+    });
+
+    gsap.from (".pillar",{
+      scrollTrigger: {
+        trigger: ".pillar",
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+      },
+      opacity: 0,
+      y: 50,
+      x: -30,
+      stagger: 0.5,
+      ease: "power2.out",
+    })
     document.querySelectorAll(".prod-col > div").forEach((el, i) => {
       // tags fade in fast, product rows fade+slide from their own side
       if (el.classList.contains("product-tag")) {
