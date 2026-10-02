@@ -152,7 +152,7 @@ body{
 }
 .mobile-menu a:hover{ color: var(--accent-glow); }
 
-/* -------------HOMEPAGE------------- */
+/* =====================HOMEPAGE====================== */
 .hero{
     position: relative;
     display: block;
@@ -233,7 +233,7 @@ body{
     border-color: var(--accent-glow);
 }
 
-/* -----------------COLLECTIONS-------------- */
+/* ================COLLECTIONS=================== */
 .collection{
     max-width: var(--max-w);
     margin: 6rem auto;
@@ -339,7 +339,7 @@ body{
     gap: 12px; 
 }
 
-/* -----------------ABOUT US------------- */
+/* =========================ABOUT US======================== */
 .about{
     
     max-width: var(--max-w);
@@ -761,6 +761,102 @@ body{
     color: var(--accent-glow);
     font-size: 0.65rem;
     text-align: right;
+}
+
+/* ============================HALO HERO========== */
+.halo-hero{
+    position: relative;
+    display: block;
+    min-height: 100svh;
+    overflow: hidden;
+}
+.halo-hero img{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-specs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 25px;
+}
+.grid-imgs{
+    border-radius: 50px;
+    object-fit: cover;
+    height: 290px;
+    width: 480px;
+    overflow: visible;
+    border: 2px solid var(--brass-highlights);
+    box-shadow: 0 0 8px var(--accent-glow);
+    transition: transform 1s ease, border 1s ease, box-shadow 1s ease;
+}
+.grid-imgs:hover{
+    transform: scale(1.1);
+    border: 2px solid var(--accent-glow);
+    box-shadow: 0 0 8px var(--brass-highlights);
+}
+.grid-imgs img{
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50px;
+    object-fit: cover;
+}
+.halo-txt{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 40%;
+    left: 22%;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 20px;
+    z-index: 1;
+}
+.halo-txt p{
+    color: var(--accent-glow);
+    font-family: var(--font-space-grotesk-bdy);
+    font-size: var(--font-size-body);
+    letter-spacing: 1px;
+}
+.halo-txt h1{
+    font-family: var(--font-cinzel-hdgs);
+    font-size: var(--font-size-hdgs);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--brass-highlights);
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* ============================MINJI HERO========== */
+.minji-imgs{
+    border-radius: 50px;
+    object-fit: cover;
+    height: 290px;
+    width: 500px;
+    overflow: visible;
+    border: 2px solid var(--brass-highlights);
+    box-shadow: 0 0 8px var(--accent-glow);
+    transition: transform 1s ease, border 1s ease, box-shadow 1s ease;
+}
+.minji-imgs:hover{
+    transform: scale(1.1);
+    border: 2px solid var(--accent-glow);
+    box-shadow: 0 0 8px var(--brass-highlights);
+}
+.minji-imgs img{
+    height: 100%;
+     width: 100%;
+     aspect-ratio: 1/1;
+     border-radius: 50px;
+     object-fit: cover;
 }
 
 /* ----------------RESPONSIVE------------- */
