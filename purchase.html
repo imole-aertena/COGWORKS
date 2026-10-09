@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0d10">
+<title>Interest List — COGWORKS</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=JetBrains+Mono:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="index.html#home" aria-label="Cogworks home"><img src="Images/logo.png" alt="Cogworks logo"></a>
+  <div class="nav-right">
+    <nav class="nav-links" aria-label="Main">
+      <ul>
+        <li><a href="index.html#collections">Collections</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="purchase.html" class="basket" aria-label="View interest list"><i class="fa-solid fa-basket-shopping"></i><span class="badge" id="badge" hidden>0</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html#collections">Collections</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</div>
+
+<main>
+  <section class="page-head">
+    <span class="eyebrow">Cogworks / Private collection</span>
+    <h1>Choose your next <span>heirloom</span></h1>
+    <p>Mark the pieces you want. This is a concept showcase: selections are saved in this browser only, and no payment is taken.</p>
+  </section>
+  <section class="section" style="padding-top:1rem" aria-label="Collection">
+    <div class="grid3">
+      
+    <article class="card" data-product="HALO" data-reveal>
+      <div class="card-img"><img src="Images/HALO 1.jpg" alt="HALO smart ring" loading="lazy"><span class="eyebrow">Ring</span></div>
+      <div class="card-body">
+        <span class="tagline">Mechanical heirloom</span>
+        <h2>HALO</h2>
+        <p>Brass signet, sapphire dome, and a kinetic gear-train.</p>
+        <button class="btn btn-block" type="button" aria-pressed="false"><span>Register interest</span><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </article>
+      
+    <article class="card" data-product="MINJI" data-reveal>
+      <div class="card-img"><img src="Images/Minji1.jpg" alt="MINJI smart glasses" loading="lazy"><span class="eyebrow">Glasses</span></div>
+      <div class="card-body">
+        <span class="tagline">Private spatial computing</span>
+        <h2>MINJI</h2>
+        <p>Camera-less brass aviator optics with a leather charging sleeve.</p>
+        <button class="btn btn-block" type="button" aria-pressed="false"><span>Register interest</span><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </article>
+      
+    <article class="card" data-product="TOCK" data-reveal>
+      <div class="card-img"><img src="Images/Tock.jpg" alt="TOCK robotic companion" loading="lazy"><span class="eyebrow">Companion</span></div>
+      <div class="card-body">
+        <span class="tagline">Local autonomy</span>
+        <h2>TOCK</h2>
+        <p>A sculpted brass companion with its own induction dock.</p>
+        <button class="btn btn-block" type="button" aria-pressed="false"><span>Register interest</span><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </article>
+    </div>
+    <div class="summary" id="interestSummary" aria-live="polite" data-reveal>
+      <div>
+        <span class="eyebrow">Your selection</span>
+        <h2>Interest list <span id="interestCount">0</span></h2>
+        <p id="interestText">No pieces selected yet. Choose a piece above to add it here.</p>
+      </div>
+      <a href="index.html#contact" class="btn">Contact the workshop <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <a class="brand" href="index.html#home">COGWORKS</a>
+  <a href="index.html#collections">Back to collections</a>
+  <small>&copy; 2026 Cogworks. Concept showcase &mdash; no payments are processed.</small>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

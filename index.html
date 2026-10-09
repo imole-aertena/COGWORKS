@@ -1,337 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COGWORKS</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0d10">
+<title>COGWORKS — When Brass Meets Luxury</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=JetBrains+Mono:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="nav-bar-ctn">
-        <div class="logo">
-            <a href="#home" class="active">
-                <img src="Images/logo.png" alt="Cogworks logo">
-            </a>
-        </div>
+<header class="nav">
+  <a class="logo" href="#home" aria-label="Cogworks home"><img src="Images/logo.png" alt="Cogworks logo"></a>
+  <div class="nav-right">
+    <nav class="nav-links" aria-label="Main">
+      <ul>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="purchase.html" class="basket" aria-label="View interest list"><i class="fa-solid fa-basket-shopping"></i><span class="badge" id="badge" hidden>0</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#collections">Collections</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
 
-        <div class="nav-right">
-            <nav class="nav-cont">
-                <ul>
-                    <li><a href="#collections">Collections</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-
-            <a href="#purchase" class="basket-link" aria-label="View purchases">
-                <i class="fa-solid fa-basket-shopping"></i>
-            </a>
-
-            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <ul>
-            <li><a href="#collections">Collections</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+<main>
+  <section class="hero" id="home">
+    <video src="Videos/bg.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+    <div class="hero-txt">
+      <span class="eyebrow">Cogworks &mdash; Est. 2026</span>
+      <h1>WHEN BRASS MEETS <span>LUXURY</span></h1>
+      <p>Precision-built heirlooms for a world that hides its gears. We don't.</p>
+      <a class="btn" href="#collections">Explore collections</a>
     </div>
+  </section>
 
-    <main>
-        <!-- HOME -->
-        <section class="homepage" id="home">
-            <div class="hero">
-                <video src="Videos/bg.mp4" class="hero-img" autoplay muted loop playsinline></video>
-                <div class="hero-txt">
-                    <h3>COGWORKS &mdash; EST. 2026</h3>
-                    <h1>WHEN BRASS MEETS</h1>
-                    <h2>LUXURY</h2>
-                    <h4>Cheap metal, once. Precision now. Engineered heirlooms for a world that hides its gears &mdash; we don't.</h4>
-                    <a href="#collections">Explore Collections</a>
-                </div>
-            </div>
-        </section>
+  <section class="section" id="collections">
+    <h2 class="section-title" data-reveal>One mechanism, finer jewelry</h2>
+    
+    <article class="product">
+      <div class="product-img"><img src="Images/HALO 1.jpg" alt="HALO smart ring" loading="lazy"></div>
+      <div class="product-txt">
+        <span class="eyebrow">01 &mdash; Ring</span>
+        <h2>HALO</h2>
+        <h3>A mechanical heirloom for the digital frontier.</h3>
+        <p>Hand-aged brass signet under a sapphire crystal dome. A micro kinetic gear-train turns with your hand to feed a 5-day hybrid reserve. A fixed-size biometric anchor, independent of external servers.</p>
+        <a class="link" href="halo.html">View full spec <i class="fa-solid fa-circle-arrow-right"></i></a>
+      </div>
+    </article>
+    
+    <article class="product reverse">
+      <div class="product-img"><img src="Images/Minji1.jpg" alt="MINJI smart glasses" loading="lazy"></div>
+      <div class="product-txt">
+        <span class="eyebrow">02 &mdash; Glasses</span>
+        <h2>MINJI</h2>
+        <h3>Absolute privacy. Uncompromised optics.</h3>
+        <p>Camera-less, audio-free smart glasses with a Sandboxed Retinal Loom, linked to your phone over a secure 256-bit protocol. Brushed-brass aviator frame, clockwork gear-rivets, and a leather sleeve that wirelessly charges the 5-day battery.</p>
+        <a class="link" href="minji.html">View full spec <i class="fa-solid fa-circle-arrow-right"></i></a>
+      </div>
+    </article>
+    
+    <article class="product">
+      <div class="product-img"><img src="Images/Tock.jpg" alt="TOCK robotic companion" loading="lazy"></div>
+      <div class="product-txt">
+        <span class="eyebrow">03 &mdash; Companion</span>
+        <h2>TOCK</h2>
+        <h3>Autonomy without exposure. Your physical shadow.</h3>
+        <p>A local autonomous companion pairing drone aerodynamics with polished brass. Secure local language model, voice synthesis, environment scanner, and talons for object retrieval. 36 hours per charge, then it perches on a copper induction dock.</p>
+        <a class="link" href="tock.html">View full spec <i class="fa-solid fa-circle-arrow-right"></i></a>
+      </div>
+    </article>
+  </section>
 
-        <!-- COLLECTIONS -->
-        <section class="collection" id="collections">
-            <h1>One mechanism, finer jewelry</h1>
+  <section class="section" id="about">
+    <div class="about-head" data-reveal>
+      <h2>The future should be forged, not tracked.</h2>
+      <p>Technology shouldn't demand your identity as the price of entry. Cogworks builds heirlooms, not appliances that spy, catalog your habits, or stream your data to cloud farms. Classic mechanics meet sandboxed local computing. No profiles. No tracking logs. No compromise.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar" data-reveal><i class="fa-solid fa-eye-slash"></i><h3>Cameraless utility</h3><p>No outward-facing cameras or recorders. MINJI and TOCK run on passive infrared, iris arrays, and sensory nodes, so your surroundings never become surveillance.</p></div>
+      <div class="pillar" data-reveal><i class="fa-solid fa-shield-halved"></i><h3>Localized sandboxing</h3><p>Every calculation, biometric, and automation runs on-device. No databases, no external sync. Your footprint stays yours.</p></div>
+      <div class="pillar" data-reveal><i class="fa-solid fa-gears"></i><h3>Luxury horology</h3><p>Hand-aged brass, steel, and monel, held by working gear-rivets. Built to outlast upgrade cycles and be passed down.</p></div>
+    </div>
+    <p class="about-foot" data-reveal>Forged locally. Computed independently. Established in the Lagos Tech Network Core.</p>
+  </section>
 
-            <div class="prod-col">
+  <section class="section" id="contact">
+    <div class="contact-head" data-reveal>
+      <span class="eyebrow">[ Cogworks core ]</span>
+      <h2>Establish a connection</h2>
+      <p>Custom orders, data sandboxing, or mechanical questions? Write straight to the workshop floor.</p>
+    </div>
+    <div class="contact-grid">
+      <form class="form" id="contactForm" data-reveal novalidate>
+        <div class="field"><label for="name">Full name</label><input type="text" id="name" name="name" placeholder="Emily Johnson" autocomplete="name" minlength="2" maxlength="60" required></div>
+        <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" maxlength="100" required></div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="7" placeholder="Type your message here..." maxlength="1000" required></textarea></div>
+        <button type="submit" class="btn">Send message <i class="fa-solid fa-arrow-right"></i></button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+      <aside class="contact-info" data-reveal>
+        <div class="status"><i></i><span>SYSTEM ONLINE</span></div>
+        <h3>Direct channels</h3>
+        <p>Prefer a direct line? Reach the workshop here.</p>
+        <a href="mailto:nyxcor3n@gmail.com" class="contact-card"><span class="contact-icon"><i class="fa-solid fa-envelope"></i></span><span><small>EMAIL</small><strong>nyxcor3n@gmail.com</strong></span><i class="fa-solid fa-arrow-up-right-from-square arrow"></i></a>
+        <a href="tel:+2348150743919" class="contact-card"><span class="contact-icon"><i class="fa-solid fa-phone"></i></span><span><small>PHONE</small><strong>+234 815 074 3919</strong></span><i class="fa-solid fa-arrow-up-right-from-square arrow"></i></a>
+        <div class="terminal">
+          <div><span>NODE</span><strong>LAGOS / NG</strong></div>
+          <div><span>STATUS</span><strong>ACCEPTING MESSAGES</strong></div>
+          <div><span>RESPONSE</span><strong>DIRECT CHANNEL</strong></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
 
-                <!-- 01 — HALO -->
-                <div class="product-tag">01 &mdash; Ring</div>
-                <div class="collecion1">
-                    <div class="col-img">
-                        <img src="Images/HALO 1.jpg" alt="Display image of the HALO smart ring">
-                    </div>
-                    <div class="col-sub">
-                        <h2>HALO</h2>
-                        <h3>A mechanical heirloom forged for the digital frontier.</h3>
-                        <p>
-                            The Cogworks HALO fuses an iconic hand-aged brass signet architecture with
-                            state-of-the-art neural telemetry. Enclosed beneath a pristine sapphire
-                            crystal dome, a microscopic kinetic gear-train dynamically rotates in
-                            tandem with your natural hand movements, trickling power directly into a
-                            5-day hybrid reserve. Designed as a fixed-size, unyielding statement piece,
-                            HALO operates as a localized biometric anchor &mdash; completely independent
-                            of external data servers &mdash; bringing the weight of classic luxury to
-                            modern utility.
-                        </p>
-                        <a href="halo.html">View full spec <i class="fa-solid fa-circle-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- 02 — MINJI (mirrored: image right, text left) -->
-                <div class="product-tag">02 &mdash; Glasses</div>
-                <div class="collecion1 reverse">
-                    <div class="col-img">
-                        <img src="Images/Minji1.jpg" alt="Display image of the MINJI smart glasses">
-                    </div>
-                    <div class="col-sub">
-                        <h2>MINJI</h2>
-                        <h3>Absolute privacy. Uncompromised optics.</h3>
-                        <p>
-                            The Cogworks MINJI reimagines spatial computing through a lens of
-                            defensive architecture and absolute data sovereignty. Stripping away
-                            invasive outward-facing cameras and audio recorders, MINJI relies on an
-                            encrypted, camera-less Sandboxed Retinal Loom that anchors directly to
-                            your phone via a secure 256-bit protocol. Encased in a half-rim
-                            brushed-brass aviator framework featuring articulated clockwork
-                            gear-rivets and mechanical haptic nodes, it delivers full AR/VR immersion
-                            while keeping you completely off the grid. When the journey ends, the
-                            glasses rest inside a hand-stitched, full-grain leather sleeve that
-                            charges the 5-day battery core wirelessly via a hidden induction matrix.
-                        </p>
-                        <a href="minji.html">View full spec <i class="fa-solid fa-circle-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- 03 — TOCK -->
-                <div class="product-tag">03 &mdash; Companion</div>
-                <div class="collecion1">
-                    <div class="col-img">
-                        <img src="Images/Tock.jpg" alt="Display image of the TOCK robotic companion">
-                    </div>
-                    <div class="col-sub">
-                        <h2>TOCK</h2>
-                        <h3>Autonomy without exposure. Your physical shadow.</h3>
-                        <p>
-                            The Cogworks TOCK is a localized autonomous companion engine built to
-                            handle your physical and digital world without compromising your data
-                            perimeter. Blending the panel-layered, futuristic aerodynamics of a
-                            cyberpunk mechanical drone with the intricate, hand-polished brass
-                            aesthetics of classic horology, TOCK acts as an omnipresent personal
-                            assistant. Driven by a secure local language model, TOCK features
-                            tactical voice synthesis, a localized environment scanner, and
-                            low-tolerance articulating talons capable of object retrieval. Operating
-                            entirely within a closed sandboxed network, TOCK runs for 36 continuous
-                            hours on a single charge. When at rest, it drops onto an antique-finished
-                            copper birdcage matrix, seamlessly routing fast induction currents upward
-                            through its claws.
-                        </p>
-                        <a href="tock.html">View full spec <i class="fa-solid fa-circle-arrow-right"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ABOUT US -->
-        <section class="about" id="about">
-            <div class="abt-header">
-                <h1>
-                    We believe the future should be forged, not tracked.
-                </h1>
-                <p>            
-                In an era where technology demands your identity as 
-                entry currency, Cogworks stands as an unyielding 
-                counter-weight. We do not build appliances that spy on 
-                your life, catalog your habits, or stream your intimate 
-                data to distant cloud farms. We build heirlooms. By 
-                fusing the timeless, tangible mastery of classic 
-                mechanics with the fortress-like sovereignty of 
-                sandboxed local computing, we create functional art that 
-                belongs entirely to you. No profiles. No tracking logs. 
-                No compromise.
-                </p>
-            </div>
-            <div class="core-pillars">
-                <div class="pillar">
-                    <h2>CAMERALESS UTILITY</h2>
-                    <p>
-                        We intentionally strip away all outward-facing cameras and 
-                        environmental video recording hardware from our ecosystems. 
-                        The MINJI frames and TOCK companion operate entirely via 
-                        localized passive infrared, iris arrays, and sensory nodes. 
-                        You command your digital workspace without ever turning your 
-                        environment into a surveillance asset.
-                    </p>
-                </div>
-                <div class="pillar">
-                    <h2>LOCALIZED SANDBOXING</h2>
-                    <p>
-                        Every calculation, biometric track, and automation routine 
-                        generated by the HALO ring or your companion drone is 
-                        processed strictly on-device. Your hardware acts as a secure, 
-                        sandboxed terminal for your personal data. We do not maintain 
-                        databases, we do not sync to external servers, and we do not 
-                        own your digital footprint. You do.
-                    </p>
-                </div>
-                <div class="pillar">
-                    <h2>LUXURY HOROLOGY</h2>
-                    <p>
-                        A product meant to protect your legacy should outlast a 
-                        digital upgrade cycle. Our chassis are crafted from 
-                        hand-aged patina brass, industrial steel, and monel alloys, 
-                        held together by functional clockwork gear-rivets. 
-                        These are mechanical tools built with heavy hardware 
-                        integrity, designed to be passed down through generations.
-                    </p>
-                </div>
-            </div>
-            <div class="abt-footr">
-                <p>
-                    Forged locally. Computed independently. 
-                    Established in the Lagos Tech Network Core.
-                </p>
-            </div>
-        </section>
-
-
-        <!-- CONTACT US -->
-        <section class="contact" id="contact">
-
-            <div class="ct-hdr">
-                <span class="ct-tag">
-                    [ COGWORKS CORE ]
-                </span>
-                <h1>
-                ESTABLISH A CONNECTION BETWEEN US.
-                </h1>
-                <p>
-                Have a bespoke inquiry regarding a custom hardware order,
-                data sandboxing parameters, or mechanical optimization?
-                Establish a direct link with the workshop floor.
-                </p>
-            </div>
-
-            <div class="contact-grid">
-
-                <!-- ================= FORM ================= -->
-                <form class="crypt-form" id="contactForm">
-
-                    <div class="input-grp">
-                    <label for="name"> ENTER YOUR FULL NAME:</label>
-                    <input type="text" id="name" name="name" placeholder="Emily Johnson" minlength="2" maxlength="60" required>
-                    </div>
-
-                    <div class="input-grp">
-                    <label for="email"> ENTER YOUR EMAIL:</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" maxlength="100"  required>
-                    </div>
-
-                    <div class="input-grp">
-                    <label for="message"> ENCRYPT MESSAGE BODY:</label>
-                    <textarea  id="message" name="message" rows="7" placeholder="Type your secure transmission here..." maxlength="1000" required></textarea>
-                    </div>
-
-                    <button type="submit" class="terminal-cta">
-                    TRANSMIT MESSAGE<i class="fa-solid fa-arrow-right"></i>
-                    </button>
-
-                    <p class="form-status" id="formStatus"></p>
-
-                </form>
-
-
-                <!-- ================= CONTACT INFO ================= -->
-                <aside class="contact-info">
-
-                    <div class="contact-status">
-                        <span class="status-dot"></span>
-                        <span>SYSTEM ONLINE</span>
-                    </div>
-
-                    <h2>DIRECT CHANNELS</h2>
-
-                    <p class="contact-intro">
-                    Prefer a direct transmission? Reach the workshop
-                    through one of the secure channels below.
-                    </p>
-
-
-                    <!-- EMAIL -->
-                    <a href="mailto:nyxcor3n@gmail.com" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-
-                        <div class="contact-card-text">
-                            <span class="contact-label">EMAIL</span>
-                            <strong>nyxcor3n@gmail.com</strong>
-                        </div>
-
-                        <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
-                    </a>
-
-
-                    <!-- PHONE -->
-                    <a href="tel:+2348150743919" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-
-                        <div class="contact-card-text">
-                            <span class="contact-label">PHONE</span>
-                            <strong>+234 815 074 3919</strong>
-                        </div>
-
-                        <i class="fa-solid fa-arrow-up-right-from-square contact-arrow"></i>
-                    </a>
-
-
-                    <!-- LOCATION / IDENTITY -->
-                    <div class="contact-terminal">
-
-                        <div class="terminal-line">
-                            <span>NODE</span>
-                            <strong>LAGOS / NG</strong>
-                        </div>
-
-                        <div class="terminal-line">
-                            <span>STATUS</span>
-                            <strong>ACCEPTING TRANSMISSIONS</strong>
-                        </div>
-
-                        <div class="terminal-line">
-                            <span>RESPONSE</span>
-                            <strong>DIRECT CHANNEL</strong>
-                        </div>
-
-                    </div>
-
-                </aside>
-
-            </div>
-
-        </section>
-
-
-
-    </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+<footer class="footer">
+  <a class="brand" href="index.html#home">COGWORKS</a>
+  <a href="index.html#collections">Back to collections</a>
+  <small>&copy; 2026 Cogworks. Concept showcase &mdash; no payments are processed.</small>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
