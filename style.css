@@ -836,12 +836,22 @@ body{
 }
 
 /* ============================MINJI HERO========== */
+.minji-specs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    padding: 50px; 
+    border: 1px solid blue;
+}
 .minji-imgs{
     border-radius: 50px;
     object-fit: cover;
-    height: 290px;
-    width: 500px;
-    overflow: visible;
+    height: 250px;
+    width: 450px;
+    overflow: hidden;
     border: 2px solid var(--brass-highlights);
     box-shadow: 0 0 8px var(--accent-glow);
     transition: transform 1s ease, border 1s ease, box-shadow 1s ease;
